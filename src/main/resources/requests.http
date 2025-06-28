@@ -1,0 +1,22 @@
+### Example of a POST request to register a new user
+POST http://localhost:9090/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "username": "user",
+  "password": "test"
+}
+### Example of a POST request to authenticate a user
+POST http://localhost:9090/api/auth/authenticate
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "test"
+}
+### Put in the token you received in the response of the previous request
+@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0IiwiaWF0IjoxNzUxMTExODE1LCJleHAiOjE3NTExMTI1MzV9.Ku96ga_mQnoJ9a48l3o7Jqo64RWiAhDsOfv7iacZbXQ
+@bearerToken=Bearer {{token}}
+GET http://localhost:9090/api/home
+Authorization: {{bearerToken}}
