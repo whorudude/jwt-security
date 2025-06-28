@@ -4,7 +4,6 @@ server:
     context-path: /api
 
 spring:
-
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME:postgres}
     username: ${DB_USERNAME:postgres}
@@ -17,17 +16,16 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
   flyway:
     enabled: true
     url: ${spring.datasource.url}
     user: ${spring.datasource.username}
     password: ${spring.datasource.password}
     baseline-on-migrate: true
-
 custom:
   jwt:
     #hardcoded 256-bit hex formatted secret key
     #generated on https://allkeysgenerator.com/random/security-encryption-key-generator.aspx
     secret: 77397A24432646294A404E635266556A586E3272357538782F4125442A472D4B
     expiration: 720000
+
