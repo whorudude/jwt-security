@@ -4,19 +4,19 @@ Content-Type: application/json
 
 {
   "email": "test@gmail.com",
-  "username": "user",
-  "password": "test"
+  "username": "user1",
+  "password": "test1"
 }
 ### Example of a POST request to authenticate a user
 POST http://localhost:9090/api/auth/authenticate
 Content-Type: application/json
 
 {
-  "username": "user",
-  "password": "test"
+  "username": "user1",
+  "password": "test1"
 }
 ### Put in the token you received in the response of the previous request
-@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0IiwiaWF0IjoxNzUxMTExODE1LCJleHAiOjE3NTExMTI1MzV9.Ku96ga_mQnoJ9a48l3o7Jqo64RWiAhDsOfv7iacZbXQ
+@token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImlhdCI6MTc1MTE1MjMyOCwiZXhwIjoxNzUxMTUzMDQ4fQ.VUyK8J5t-j5Mdms1MVix6Z5J2FfRuht88ONJKR8wI0A
 @bearerToken=Bearer {{token}}
 GET http://localhost:9090/api/home
 Authorization: {{bearerToken}}
